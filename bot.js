@@ -1,7 +1,6 @@
 const fs = require('fs');
 const mineflayer = require('mineflayer');
 const Discord = require('discord.js');
-const Hashmap = require('hashmap');
 const verifying = [];
 
 var client = new Discord.Client();
