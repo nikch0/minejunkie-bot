@@ -17,8 +17,8 @@ var serverIP = "play.minejunkie.com";
 
 var bot = mineflayer.createBot({
 	host: serverIP,
-	username: "avastarbob@yahoo.com",
-	password: "Samson1636",
+	username: "-",
+	password: "-",
 	viewDistance: "tiny",
 	version: "1.8"
 });
@@ -88,10 +88,6 @@ client.on('message', (message) => {
 			message.channel.send("`You've already requested for a code look Direct Messages with me.`");
 			return;
 		}
-		/*if (verifyingMap.get(args[0]) != null) {
-			message.channel.send("`You've already requested for a code look Direct Messages with me.`");
-			return;
-		}*/
 
 		var code = generateCode(5);
 		//verifyingMap.set(args[0], code + "|" + message.author.id);
@@ -214,8 +210,6 @@ function addWin(username, amount, winTo, worth, coinflips) {
 bot.on("message", (json) => {
 	var message = json.toString();
 	var blocksMined;
-
-	//console.log(message);	
 
 	if (message.match(/\[\d+\] \[.+\]/)) {
 		let username;
