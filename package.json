@@ -1,0 +1,14 @@
+{
+  "name": "junkie-bot",
+  "version": "0.0.0",
+  "description": "Junkie Bot",
+  "main": "bot.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "discord.js": "^12.0.1",
+    "fs": "0.0.1-security",
+    "mineflayer": "^2.11.0"
+  }
+}
