@@ -34,8 +34,8 @@ var generateCode = (n) => {
 
 client.on('ready', () => {
 	console.log("Discord connected");
-	client.user.setActivity('with the gang', { type: "PLAYING" });
-	client.user.setStatus('dnd');
+	client.user.setPresence({ activity: { name: 'with the gang' }, status: 'dnd' });
+	
 	voiceChannel = client.channels.cache.get("685119927144808529");
 	gangGuild = client.guilds.cache.get(guildId);
 });
