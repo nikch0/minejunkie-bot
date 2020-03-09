@@ -2,7 +2,6 @@ const fs = require('fs');
 const mineflayer = require('mineflayer');
 const Discord = require('discord.js');
 const Hashmap = require('hashmap');
-const verifyingMap = new Hashmap();
 const verifying = [];
 
 var client = new Discord.Client();
@@ -90,7 +89,6 @@ client.on('message', (message) => {
 		}
 
 		var code = generateCode(5);
-		//verifyingMap.set(args[0], code + "|" + message.author.id);
 		verifying.push(args[0] + "|" + code + "|" + message.author.id);
 
 		message.channel.send("Check direct messages.");
