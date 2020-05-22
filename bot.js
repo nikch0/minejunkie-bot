@@ -1,16 +1,19 @@
 const fs = require('fs');
 const mineflayer = require('mineflayer');
 const Discord = require('discord.js');
-const verifying = [];
+const verifying = []; //can be changed with object too lazy + idk if the server still running
 
 var client = new Discord.Client();
 var voiceChannel;
 var gangGuild;
 
-var gangName = "-";
-var guildId = "-";
-var prefix = ".";
-var token = "-";
+var gangName = "-"; //gang name so the bot can run the command for the trophies
+var guildId = "-"; //Your server id
+var voiceChannelId = "-"// your voicechannel for the trophies id
+var verifiedRoleId = "-" // your role for the players who are verified.
+var logsCategoryId = "-" //The category that all the channels for the members will be made
+var prefix = "."; //prefix for the commands
+var token = "-"; // token from discordapp.com/developers
 var serverIP = "play.minejunkie.com";
 
 var bot = mineflayer.createBot({
@@ -36,7 +39,7 @@ client.on('ready', () => {
 	console.log("Discord connected");
 	client.user.setPresence({ activity: { name: 'with the gang' }, status: 'dnd' });
 	
-	voiceChannel = client.channels.cache.get("685119927144808529");
+	voiceChannel = client.channels.cache.get(voiceChannelId);
 	gangGuild = client.guilds.cache.get(guildId);
 });
 
@@ -67,7 +70,7 @@ client.on('message', (message) => {
 			return;
 		}
 
-		if (!message.member.roles.cache.find(x => x.id == "685124666465321078")) {
+		if (!message.member.roles.cache.find(x => x.id == verifiedRoleId)) {
 			message.channel.send("> You are not from the gang");
 			return;
 		}
@@ -301,7 +304,7 @@ bot.on("message", (json) => {
 								allow: ['VIEW_CHANNEL'],
 							}
 						],
-						parent: "685847459980902441",
+						parent: logsCategoryId,
 					});
 				}
 			}
