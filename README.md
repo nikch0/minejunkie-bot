@@ -1,5 +1,7 @@
 # minejunkie-bot
 
+**THE LAST UPDATE WAS 2 MONTHS AGO WWHEN I ACTUALLY PLAYED THERE SO IDK IF IT STILL WORKS WITH THEIR CURRENT VALUES FOR GANG TOP AND etc**
+
 A minecraft bot I've made for our gang in *play.minejunkie.com* to output important information to discord for our members using **discord.js**
 
 ![When you type something in chat.](https://i.imgur.com/rRJl7f7.png)
